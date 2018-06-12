@@ -14,6 +14,10 @@
 ### Script List
 
 * [chrome_windowsize](chrome_windowsize/)
+* [clipboard_to_plaintext](clipboard_to_plaintext/)
+* [edit_clipboard](edit_clipboard/)
+* [open_chrome_with_url](open_chrome_with_url/)
+* [hostname_to_ip_address](hostname_to_ip_address/)
 <br><br>
 
 ---
