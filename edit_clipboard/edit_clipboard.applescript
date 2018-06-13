@@ -9,7 +9,7 @@ if judgeStr ≠ {} then
 	set strClipboard to the clipboard
 else if judgeStr = {} then
 	display alert "クリップボードに文字列が入っていないようです"
-	error number -128
+	return
 end if
 
 set {buttonVal, textVal} to {button returned, text returned} of (display dialog "このクリップボードの情報をどうしますか？" default answer strClipboard buttons {"削除", "この内容で編集", "なにもしない"})
