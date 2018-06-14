@@ -1,3 +1,1 @@
-tanaka-pc
-suzuki-pc
-yamada-pc
+tanaka-pcsuzuki-pcyamada-pc

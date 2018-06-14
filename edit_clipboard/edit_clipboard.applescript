@@ -1,21 +1,26 @@
--- Created by stymyuko
+-- 
+-- created by stymyuko
+--
 
--- ƒNƒŠƒbƒvƒ{[ƒh‚Ìƒf[ƒ^‚ª•¶š—ñ‚©‚Ç‚¤‚©‚ğ”»•Ê
+-- ã‚¿ã‚¤ãƒˆãƒ«
+set theTitle to "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®ãƒ‡ãƒ¼ã‚¿ã‚’ç·¨é›†"
+
+-- ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®ãƒ‡ãƒ¼ã‚¿ãŒæ–‡å­—åˆ—ã‹ã©ã†ã‹ã‚’åˆ¤åˆ¥
 set judgeStr to clipboard info for string
 
--- ƒNƒŠƒbƒvƒ{[ƒh‚Ìƒf[ƒ^‚ª‹ó‚Å‚Í‚È‚¢ê‡A•Ï”‚Ö“ü‚ê‚é
--- ƒNƒŠƒbƒvƒ{[ƒh‚Ìƒf[ƒ^‚ª‹ó‚Ìê‡AƒAƒ‰[ƒg‚ğo‚µ‚ÄI—¹
-if judgeStr ‚ {} then
+-- ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®ãƒ‡ãƒ¼ã‚¿ãŒç©ºã§ã¯ãªã„å ´åˆã€å¤‰æ•°ã¸ä»£å…¥ã€‚ç©ºã®å ´åˆã€ã‚¢ãƒ©ãƒ¼ãƒˆã‚’å‡ºã—ã¦çµ‚äº†
+if judgeStr â‰  {} then
 	set strClipboard to the clipboard
+	
 else if judgeStr = {} then
-	set exitButton to display alert "ƒNƒŠƒbƒvƒ{[ƒh‚É•¶š—ñ‚ª“ü‚Á‚Ä‚¢‚È‚¢‚æ‚¤‚Å‚·" buttons {"I—¹"}
+	set exitButton to display alert "ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«æ–‡å­—åˆ—ãŒå…¥ã£ã¦ã„ãªã„ã‚ˆã†ã§ã™" buttons {"OK"}
 	return
 end if
 
-set {buttonVal, textVal} to {button returned, text returned} of (display dialog "‚±‚ÌƒNƒŠƒbƒvƒ{[ƒh‚Ìî•ñ‚ğ‚Ç‚¤‚µ‚Ü‚·‚©H" default answer strClipboard buttons {"íœ", "‚±‚Ì“à—e‚Å•ÒW", "‚È‚É‚à‚µ‚È‚¢"})
+set {buttonVal, textVal} to {button returned, text returned} of (display dialog "ã“ã®ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®æƒ…å ±ã‚’ã©ã†ã—ã¾ã™ã‹ï¼Ÿ" with title theTitle default answer strClipboard buttons {"å‰Šé™¤", "ã“ã®å†…å®¹ã§ç·¨é›†", "ãªã«ã‚‚ã—ãªã„"})
 
-if buttonVal is "‚±‚Ì“à—e‚Å•ÒW" then
+if buttonVal is "ã“ã®å†…å®¹ã§ç·¨é›†" then
 	set the clipboard to textVal
-else if buttonVal is "íœ" then
+else if buttonVal is "å‰Šé™¤" then
 	set the clipboard to ""
 end if
