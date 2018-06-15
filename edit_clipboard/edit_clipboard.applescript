@@ -17,7 +17,7 @@ else if judgeStr = {} then
 	return
 end if
 
-set {buttonVal, textVal} to {button returned, text returned} of (display dialog "このクリップボードの情報をどうしますか？" with title theTitle default answer strClipboard buttons {"削除", "この内容で編集", "なにもしない"})
+set {buttonVal, textVal} to {button returned, text returned} of (display dialog "このクリップボードの情報をどうしますか？" default answer strClipboard with title theTitle buttons {"削除", "この内容で上書き", "なにもしない"})
 
 if buttonVal is "この内容で編集" then
 	set the clipboard to textVal

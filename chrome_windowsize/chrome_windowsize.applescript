@@ -16,7 +16,7 @@ if selectSize is false then
 	return selectSize
 end if
 
--- 項目がチョイスされた場合。{}が必要
+-- 項目が選択された場合。{}が必要
 if selectSize is {"横600px×縦600px"} then
 	set aNum to 0
 	set bNum to 0
@@ -30,9 +30,9 @@ else if selectSize is {"横1300px×縦1000px"} then
 	set dNum to 1000
 	
 else if selectSize is {"サイズを入力する"} then
-	set widthVal to display dialog "ウィンドウサイズ（横/px）を「半角数字」で入力してください。" with title theTitle default answer "例: 600　※1920以下" buttons {"キャンセル", "OK"} default button 2
+	set widthVal to display dialog "ウィンドウサイズ（横/px）を「半角数字」で入力してください。" default answer "例: 600　※1920以下" with title theTitle buttons {"キャンセル", "OK"} default button 2
 	set widthVal to text returned of the result
-	set heightVal to display dialog "ウィンドウサイズ（縦/px）を「半角数字」で入力してください。" with title theTitle default answer "例: 600　※1080以下" buttons {"キャンセル", "OK"} default button 2
+	set heightVal to display dialog "ウィンドウサイズ（縦/px）を「半角数字」で入力してください。" default answer "例: 600　※1080以下" with title theTitle buttons {"キャンセル", "OK"} default button 2
 	set heightVal to text returned of the result
 	set aNum to 0
 	set bNum to 0

@@ -2,7 +2,7 @@
 -- created by stymyuko
 --
 
--- アラートで準備ができているか確認
+-- 準備ができているかアラートで確認
 display alert "準備はできていますか？" & return & return & "確認:" & return & "ホスト名ごとに1つずつ改行を入れた" & return & "テキストファイルを用意してください。" & return & "※LAN接続しているもののみ取得できます。" & return & "※一番最後の行に改行を入れ忘れないこと！" & return & return & "例:" & return & "ホスト名Ａ（改行）" & return & "ホスト名Ｂ（改行）" & return & "ホスト名Ｃ（改行）" buttons {"キャンセル", "OK"} default button 2
 
 -- キャンセルボタンクリックで停止
