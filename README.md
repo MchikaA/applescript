@@ -18,6 +18,7 @@
 * [edit_clipboard](edit_clipboard/)
 * [open_chrome_with_url](open_chrome_with_url/)
 * [hostname_to_ip_address](hostname_to_ip_address/)
+* [account_management](account_management/)
 <br><br>
 
 ---
