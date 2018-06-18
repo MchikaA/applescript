@@ -2,37 +2,37 @@
 -- created by stymyuko
 --
 
--- ã‚¿ã‚¤ãƒˆãƒ«
-set theTitle to "Chrome ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºã‚’å¤‰æ›´"
+-- ƒ^ƒCƒgƒ‹
+set theTitle to "Chrome ‚ÌƒEƒBƒ“ƒhƒEƒTƒCƒY‚ğ•ÏX"
 
--- ãƒªã‚¹ãƒˆ
-set theList to {"æ¨ª600pxÃ—ç¸¦600px", "æ¨ª1300pxÃ—ç¸¦1000px", "ã‚µã‚¤ã‚ºã‚’å…¥åŠ›ã™ã‚‹"}
+-- ƒŠƒXƒg
+set theList to {"‰¡600px~c600px", "‰¡1300px~c1000px", "ƒTƒCƒY‚ğ“ü—Í‚·‚é"}
 
--- ãƒªã‚¹ãƒˆã‹ã‚‰é …ç›®ã‚’é¸æŠã—å¤‰æ•°ã¸ä»£å…¥ã€‚æ³¨: ã‚­ãƒ£ãƒ³ã‚»ãƒ«ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯ã¯falseãŒå…¥ã‚‹
-set selectSize to (choose from list theList with prompt "ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºã‚’é¸æŠ" with title theTitle OK button name "OK" cancel button name "ã‚­ãƒ£ãƒ³ã‚»ãƒ«")
+-- ƒŠƒXƒg‚©‚ç€–Ú‚ğ‘I‘ğ‚µ•Ï”‚Ö‘ã“üB’: ƒLƒƒƒ“ƒZƒ‹ƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚Ífalse‚ª“ü‚é
+set selectSize to (choose from list theList with prompt "ƒEƒBƒ“ƒhƒEƒTƒCƒY‚ğ‘I‘ğ" with title theTitle OK button name "OK" cancel button name "ƒLƒƒƒ“ƒZƒ‹")
 
--- falseã®å ´åˆã€çµ‚äº†
+-- false‚Ìê‡AI—¹
 if selectSize is false then
-	return selectSize
+	return
 end if
 
--- é …ç›®ãŒé¸æŠã•ã‚ŒãŸå ´åˆã€‚{}ãŒå¿…è¦
-if selectSize is {"æ¨ª600pxÃ—ç¸¦600px"} then
+-- €–Ú‚ª‘I‘ğ‚³‚ê‚½ê‡B{}‚ª•K—v
+if selectSize is {"‰¡600px~c600px"} then
 	set aNum to 0
 	set bNum to 0
 	set cNum to 600
 	set dNum to 600
 	
-else if selectSize is {"æ¨ª1300pxÃ—ç¸¦1000px"} then
+else if selectSize is {"‰¡1300px~c1000px"} then
 	set aNum to 0
 	set bNum to 0
 	set cNum to 1300
 	set dNum to 1000
 	
-else if selectSize is {"ã‚µã‚¤ã‚ºã‚’å…¥åŠ›ã™ã‚‹"} then
-	set widthVal to display dialog "ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºï¼ˆæ¨ª/pxï¼‰ã‚’ã€ŒåŠè§’æ•°å­—ã€ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚" default answer "ä¾‹: 600ã€€â€»1920ä»¥ä¸‹" with title theTitle buttons {"ã‚­ãƒ£ãƒ³ã‚»ãƒ«", "OK"} default button 2
+else if selectSize is {"ƒTƒCƒY‚ğ“ü—Í‚·‚é"} then
+	set widthVal to display dialog "ƒEƒBƒ“ƒhƒEƒTƒCƒYi‰¡/pxj‚ğu”¼Šp”šv‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B" default answer "—á: 600@¦1920ˆÈ‰º" with title theTitle buttons {"ƒLƒƒƒ“ƒZƒ‹", "OK"} default button 2
 	set widthVal to text returned of the result
-	set heightVal to display dialog "ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºï¼ˆç¸¦/pxï¼‰ã‚’ã€ŒåŠè§’æ•°å­—ã€ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚" default answer "ä¾‹: 600ã€€â€»1080ä»¥ä¸‹" with title theTitle buttons {"ã‚­ãƒ£ãƒ³ã‚»ãƒ«", "OK"} default button 2
+	set heightVal to display dialog "ƒEƒBƒ“ƒhƒEƒTƒCƒYic/pxj‚ğu”¼Šp”šv‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B" default answer "—á: 600@¦1080ˆÈ‰º" with title theTitle buttons {"ƒLƒƒƒ“ƒZƒ‹", "OK"} default button 2
 	set heightVal to text returned of the result
 	set aNum to 0
 	set bNum to 0
