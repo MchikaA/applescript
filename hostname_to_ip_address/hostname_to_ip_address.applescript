@@ -10,16 +10,22 @@ if button returned of result is "キャンセル" then
 	error number -128
 end if
 
--- 外部ファイルを変数theStrに代入する。
-set theStr to choose file with prompt "ホスト名を入れたテキストファイルを選択してください"
+-- 外部ファイルをHFSパスへ
+set hfsPath to choose file with prompt "ホスト名を入れたテキストファイルを選択してください"
 
--- POSIX path の作成
-set posixPath to (quoted form of POSIX path of contents of theStr) as Unicode text
-posixPath
+-- HFSパスからPOSIXパスへ
+set posixPath to (quoted form of POSIX path of contents of hfsPath) as Unicode text
 
+-- smbutil lookup コマンド
 set ipAddr to do shell script "cat " & posixPath & " | while read i; do smbutil lookup $i; done"
 
-do shell script "echo " & return & "/********実行結果" & return & ipAddr & return & "********/" & " >> " & posixPath
+-- 結果が空ではない場合、ファイルへ追記。空の場合、アラートを出して終了
+if ipAddr is "" then
+	display alert "取得できなかったようです！" buttons {"OK"}
+	return
+else
+	do shell script "echo " & return & "/********実行結果" & return & ipAddr & return & "********/" & " >> " & posixPath
+end if
 
 -- 終了アラート
 display alert "完了しました！" & return & "テキストファイルを確認してください" buttons {"OK"}
