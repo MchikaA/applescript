@@ -17,8 +17,8 @@
 * [chrome_windowsize](chrome_windowsize/) -- Chrome のウィンドウサイズを変更
 * [clipboard_to_plaintext](clipboard_to_plaintext/) -- クリップボードのデータをプレーンテキストへ変換
 * [edit_clipboard](edit_clipboard/) -- クリップボードのデータを編集
-* [open_chrome_with_url](open_chrome_with_url/) -- ホスト名をIPアドレスへ変換（LAN接続のみ）
-* [hostname_to_ip_address](hostname_to_ip_address/) -- Chrome でURLを開く
+* [open_chrome_with_url](open_chrome_with_url/) -- Chrome でURLを開く
+* [hostname_to_ip_address](hostname_to_ip_address/) -- ホスト名をIPアドレスへ変換（LAN接続のみ）
 <br><br>
 
 ---
