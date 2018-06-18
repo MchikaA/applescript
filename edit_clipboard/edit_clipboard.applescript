@@ -11,9 +11,8 @@ set judgeStr to clipboard info for string
 -- クリップボードのデータが空ではない場合、変数へ代入。空の場合、アラートを出して終了
 if judgeStr ≠ {} then
 	set strClipboard to the clipboard
-	
 else if judgeStr = {} then
-	set exitButton to display alert "クリップボードに文字列が入っていないようです" buttons {"OK"}
+	display alert "クリップボードに文字列が入っていないようです！" buttons {"OK"}
 	return
 end if
 
