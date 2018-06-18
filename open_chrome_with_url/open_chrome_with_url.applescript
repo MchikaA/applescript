@@ -10,10 +10,10 @@ BASIC認証のかかっているサイトに直接アクセスできます
 -- URLの設定
 set openUrl to ""
 
--- URLを入力していない場合、アラートが出る
+-- URLを入力していない場合、アラートを出して終了
 if openUrl is "" then
 	display alert "スクリプトにURLを入力してください！" buttons {"OK"}
-	return openUrl
+	return
 end if
 
 -- Google Chromeで開く
