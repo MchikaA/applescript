@@ -20,11 +20,11 @@ set posixPath to (quoted form of POSIX path of contents of hfsPath) as Unicode t
 set ipAddr to do shell script "cat " & posixPath & " | while read i; do smbutil lookup $i; done"
 
 -- 結果が空ではない場合、ファイルへ追記。空の場合、アラートを出して終了
-if ipAddr is "" then
+if ipAddr ≠ "" then
+	do shell script "echo " & return & "/********実行結果" & return & ipAddr & return & "********/" & " >> " & posixPath
+else if ipAddr = "" then
 	display alert "取得できなかったようです！" buttons {"OK"}
 	return
-else
-	do shell script "echo " & return & "/********実行結果" & return & ipAddr & return & "********/" & " >> " & posixPath
 end if
 
 -- 終了アラート
