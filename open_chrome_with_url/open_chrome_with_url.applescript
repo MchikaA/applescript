@@ -2,12 +2,21 @@
 -- created by stymyuko
 --
 
+(*
+URLに入力してください
+URLを https://id:password@www.example.com/ などとすると、
+BASIC認証のかかっているサイトに直接アクセスできます
+*)
+-- URLの設定
+set openUrl to ""
+
+-- URLを入力していない場合、アラートが出る
+if openUrl is "" then
+	display alert "スクリプトにURLを入力してください！" buttons {"OK"}
+	return openUrl
+end if
+
+-- Google Chromeで開く
 tell application "Google Chrome"
-	
-	(*
-	open location の例示用URLを変更してください
-	URLを https://id:password@www.example.com/ などとすると、
-	BASIC認証のかかっているサイトに直接アクセスできます
-	*)
-	open location "https://www.example.com/"
+	open location openUrl
 end tell
